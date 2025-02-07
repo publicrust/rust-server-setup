@@ -1,6 +1,3 @@
-### **📌 Save this as `README.md`**  
-
-```markdown
 # 🚀 Rust Server Setup
 
 ## 🛠️ How to Run
@@ -18,7 +15,6 @@
    ./install_rust_server.sh
    ```
 3. The server will install, update, and start automatically.
-```
 
 ---
 
