@@ -57,8 +57,10 @@ namespace Oxide.Plugins
         private const string FileName = "stringpool_dump.json";
 
         private void OnServerInitialized(bool initial)
-        {
+        { 
+            Puts("Server start and start dump plugin");
             DumpStringPool();
+            Puts("Dump end");
         }
 
         private void DumpStringPool()
