@@ -40,40 +40,4 @@ EOL
 
 chmod +x start.sh
 
-echo "== Generating StringPoolDumper plugin =="
-# Ensure plugins directory exists
-mkdir -p oxide/plugins
-
-# Write the C# plugin file
-cat > oxide/plugins/StringPoolDumper.cs <<'EOF'
-using Oxide.Core;
-
-namespace Oxide.Plugins
-{
-    [Info("StringPool Dumper", "RustGPT", "1.0.0")]
-    [Description("Dumps StringPool.toNumber dictionary to a JSON file")]
-    public class StringPoolDumper : RustPlugin
-    {
-        private const string FileName = "stringpool_dump.json";
-
-        private void OnServerInitialized(bool initial)
-        { 
-            Puts("Server start and start dump plugin");
-            DumpStringPool();
-            Puts("Dump end");
-        }
-
-        private void DumpStringPool()
-        {
-            _ = StringPool.Get("");
-            Interface.Oxide.DataFileSystem.WriteObject(FileName, StringPool.toNumber);
-            Puts($"StringPool dumped to {FileName} in oxide/data directory");
-        }
-    }
-}
-EOF
-
-echo "Plugin StringPoolDumper.cs created in oxide/plugins:"
-ls -l oxide/plugins/StringPoolDumper.cs
-
 echo "== Server downloaded =="
