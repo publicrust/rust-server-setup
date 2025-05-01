@@ -74,5 +74,4 @@ EOF
 echo "Plugin StringPoolDumper.cs created in oxide/plugins:"
 ls -l oxide/plugins/StringPoolDumper.cs
 
-echo "== Starting the server =="
-./start.sh
+echo "== Server downloaded =="
