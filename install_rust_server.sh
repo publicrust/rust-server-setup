@@ -30,7 +30,7 @@ cat > start.sh <<EOL
 +server.hostname "My Rust Server" \
 +server.identity "my_server" \
 +server.maxplayers 50 \
-+server.worldsize 4000 \
++server.worldsize 1000 \
 +server.seed 12345 \
 +server.saveinterval 300 \
 +server.secure 1 \
